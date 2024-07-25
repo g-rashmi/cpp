@@ -47,7 +47,10 @@ cin>>grid[i][j];
   cin>>exit_x>>exit_y; 
    vector<vector<bool>> visited(m, vector<bool>(n, false));
 
-  return dfs(grid, x, y, x, y, visited);
+   if(dfs(grid, x, y, x, y, visited))
+   cout<<"path exist"<<endl;
+   else
+   cout<<"not-existed"<<endl;
 }
 int main() {
    
