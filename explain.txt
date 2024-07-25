@@ -1,0 +1,18 @@
+so , as problem statement tell that  we need to whether path exit or not so first approach comes that try every  possible path one by one if not exist in one path then move to other which moving four direction whoch is up,down,left,right so i apply dfs in my approach which is depth first search 
+
+ in dfs i pass one visited boolean vector which initially false and of same size as grid , visited keep tract that these block of grid already visited !
+ so start dfs with start position and first check whether start and exist is same or not if same then return true 
+
+ if not then recursive check all four valid path (within mXn && not visited , not walls==0)
+
+if any of these recursive calls return true then true else return false 
+
+
+
+TIME COMPLEXITY :-O(4*m*n)->worst case as if in each four diraction need to check 
+space complexity:"o(m*n)-> O(m*n), Maximum Depth of the recursion tree"
+
+
+//moified question like print all the path which is exist from start positon to end in form (drd):
+like first d->down then r->right ,....
+else if path not exist then return empty string ; 
